@@ -1,0 +1,17 @@
+{
+    "name": "view-twig",
+    "description": "View-Twig Templating Engine SubComponent for SlaxWeb Framework",
+    "parent": "view",
+    "type": "sub",
+    "providers": {
+        "app": [
+            "\\SlaxWeb\\ViewTwig\\Service\\Provider"
+        ],
+        "commands": [],
+        "hooks": []
+    },
+    "configFiles": [
+        "twig.php"
+    ],
+    "subcomponents": {}
+}

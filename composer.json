@@ -1,0 +1,36 @@
+{
+    "name": "slaxweb/view-twig",
+    "description": "View-Twig Templating Engine SubComponent for SlaxWeb Framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tomaz Lovrec",
+            "email": "tomaz.lovrec@gmail.com"
+        }
+    ],
+    "require": {
+        "php":  ">=7.0.0",
+        "slaxweb/view": "dev-develop",
+        "twig/twig": "dev-master",
+        "symfony/http-foundation": "~3.0",
+        "slaxweb/logger": "dev-develop",
+        "slaxweb/config": "dev-develop"
+    },
+    "require-dev": {
+        "codeception/codeception": "dev-master",
+        "codeception/specify": "*",
+        "behat/gherkin": "~4.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "SlaxWeb\\ViewTwig\\": "src/",
+            "SlaxWeb\\ViewTwig\\Test\\Unit\\": "tests/unit/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "0.4.x-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}
