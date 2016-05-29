@@ -16,11 +16,6 @@
         "slaxweb/logger": "dev-develop",
         "slaxweb/config": "dev-develop"
     },
-    "require-dev": {
-        "codeception/codeception": "dev-master",
-        "codeception/specify": "*",
-        "behat/gherkin": "~4.4"
-    },
     "autoload": {
         "psr-4": {
             "SlaxWeb\\ViewTwig\\": "src/",
