@@ -15,6 +15,6 @@
     ],
     "subcomponents": {},
     "scripts": {
-        "post-configure": "postConfigure.php"
+        "postConfigure": "postConfigure.php"
     }
 }
