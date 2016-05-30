@@ -15,6 +15,8 @@ namespace SlaxWeb\ViewTwig\Loader;
 
 use Twig_Environment;
 use SlaxWeb\View\AbstractLoader;
+use \Psr\Log\LoggerInterface as Logger;
+use Symfony\Component\HttpFoundation\Response;
 
 class Twig extends \SlaxWeb\View\AbstractLoader
 {
