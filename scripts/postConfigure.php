@@ -19,5 +19,3 @@ preg_match("~.*?(configuration\[['\"]loader['\"]\].*?=.*?['\"](.*?)['\"]).*~s", 
 $loader = str_replace($matches[2], "Twig", $matches[1]);
 $config = str_replace($matches[1], $loader, $config);
 file_put_contents($configFile, $config);
-
-exit 0;
