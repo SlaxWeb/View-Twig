@@ -33,11 +33,12 @@ class Provider implements \Pimple\ServiceProviderInterface
         }
 
         $container["tplLoader.service"] = function (Container $container) {
-            return new \SlaxWeb\ViewTwig\Loader\Twig(
+            $loader = new \SlaxWeb\ViewTwig\Loader\Twig(
                 $container["response.service"],
                 $container["logger.service"](),
                 $container["twig.service"]
             );
+            return $loader->setTemplateExt($container["config.service"]["view.templateExtension"]);
         };
 
         $container["twig.service"] = $container->factory(
