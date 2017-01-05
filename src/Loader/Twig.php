@@ -32,7 +32,7 @@ class Twig extends \SlaxWeb\View\AbstractLoader
      *
      * @var \Twig_Environment
      */
-    protected $_twig = null;
+    protected $twig = null;
 
     /**
      * Class constructor
@@ -47,7 +47,7 @@ class Twig extends \SlaxWeb\View\AbstractLoader
      */
     public function __construct(Response $response, Logger $logger, Twig_Environment $twig)
     {
-        $this->_twig = $twig;
+        $this->twig = $twig;
 
         parent::__construct($response, $logger);
     }
@@ -61,8 +61,8 @@ class Twig extends \SlaxWeb\View\AbstractLoader
      * @param array $data View data
      * @return string
      */
-    protected function _load(string $template, array $data): string
+    protected function load(string $template, array $data): string
     {
-        return $this->_twig->render($template, $data);
+        return $this->twig->render($template, $data);
     }
 }
