@@ -12,7 +12,7 @@
  * @link      https://github.com/slaxweb/
  * @version   0.4
  */
-$configFile = "{$this->_app["appDir"]}Config/view.php";
+$configFile = "{$this->app["appDir"]}Config/view.php";
 $config = file_get_contents($configFile);
 
 // change loader
