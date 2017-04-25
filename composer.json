@@ -10,11 +10,11 @@
     ],
     "require": {
         "php":  ">=7.0.0",
-        "slaxweb/view": "dev-release/0.6.0",
+        "slaxweb/view": "~0.6",
         "twig/twig": "v2.0.0",
         "symfony/http-foundation": "~3.0",
-        "slaxweb/logger": "dev-release/0.5.0",
-        "slaxweb/config": "dev-release/0.3.0"
+        "slaxweb/logger": "~0.5",
+        "slaxweb/config": "~0.3"
     },
     "autoload": {
         "psr-4": {
