@@ -41,21 +41,17 @@ class Provider implements \Pimple\ServiceProviderInterface
             return $loader->setTemplateExt($container["config.service"]["view.templateExtension"]);
         };
 
-        $container["twig.service"] = $container->factory(
-            function (Container $cont) {
-                return new \Twig_Environment(
-                    $cont["twigFilesystemLoader.service"],
-                    ["cache" => $cont["config.service"]["twig.cacheDir"]]
-                );
-            }
-        );
+        $container["twig.service"] = function (Container $cont) {
+            return new \Twig_Environment(
+                $cont["twigFilesystemLoader.service"],
+                ["cache" => $cont["config.service"]["twig.cacheDir"]]
+            );
+        };
 
-        $container["twigFilesystemLoader.service"] = $container->factory(
-            function (Container $cont) {
-                return new \Twig_Loader_Filesystem(
-                    $cont["config.service"]["twig.templateDir"]
-                );
-            }
-        );
+        $container["twigFilesystemLoader.service"] = function (Container $cont) {
+            return new \Twig_Loader_Filesystem(
+                $cont["config.service"]["twig.templateDir"]
+            );
+        };
     }
 }
